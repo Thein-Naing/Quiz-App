@@ -11,12 +11,32 @@ import { useState } from "react";
 export default function Board () {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX]  = useState(true);
+
   const  handleClick = (i) => {
+    if (calculateWinner(squares) || squares[i]) {
+      return
+    }
     squares[i] = isX ? "X" : "O"
     setSquares(squares)
     setIsX(!isX)
 
   }
+
+  const winner = calculateWinner(squares)
+  let status
+
+  if (winner) {
+    status = `Winner: ${winner}`;
+  } else {
+    status = 'Next Player:' + (isX ? "X" : "O");
+  }
+  const handleRestart = () => {
+    setIsX (true)
+    setSquares(Array(9).fill(null))
+  }
+
+
+
 
 return (
 <div classname="board">

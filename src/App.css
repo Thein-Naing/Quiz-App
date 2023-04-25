@@ -43,13 +43,40 @@
 
 
 body {
-  font-size: 20px;
+  font: 20px;
   font-family: var(--font-roboto);
   background-color: #a4bac9;
+  margin: 20px;
 }
 
 .board-row:after {
   clear: both;
   content: "";
   display: table;
+}
+
+.square {
+  border: 1px solid #999;
+  float: left;
+  font-size: 40px;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.status, .restart {
+  margin-top: 10px;
+}
+
+
+.restart {
+
 }
