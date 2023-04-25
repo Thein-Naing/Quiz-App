@@ -1,6 +1,6 @@
 import { useState } from "react";
 
- function Square ({value, onClick}) {
+ function Square ({onClick, value}) {
   return (
     <button className="square" onClick={onClick}>
       {value}
@@ -41,19 +41,18 @@ export default function Board () {
   }
 
     return (
-      <div classname="board">
-      <div classname="board-row">
+      <div className="board">
+      <div className="board-row">
       {renderSquare(0)}
       {renderSquare(1)}
       {renderSquare(2)}
-
       </div>
-      <div classname="board-row">
+      <div className="board-row">
       {renderSquare(3)}
       {renderSquare(4)}
       {renderSquare(5)}
       </div>
-      <div classname="board-row">
+      <div className="board-row">
       {renderSquare(6)}
       {renderSquare(7)}
       {renderSquare(8)}
@@ -71,7 +70,7 @@ export default function Board () {
 function calculateWinner(squares) {
   const winningPatterns = [
     [0, 1, 2],
-    [3, 3, 5],
+    [3, 4, 5],
     [6, 7, 8],
     [0, 3, 6],
     [1, 4, 7],

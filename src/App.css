@@ -83,7 +83,10 @@ button:hover {
   background-color: #007bff;
   border-color: #007bff;
   border-radius: 0.25rem;
-  transition: color; .15s ease-in-out,background-color .15s ease-in-out,border-color ease-in-out,box-shadow ease-in-out,
+  transition: color .15s ease-in-out;
+  background-color: color .15s ease-in-out;
+  border-color: color  15s ease-in-out;
+  box-shadow: color 15s ease-in-out,
 
 }
 
