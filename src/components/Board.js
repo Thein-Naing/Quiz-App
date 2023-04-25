@@ -35,6 +35,11 @@ export default function Board () {
     setSquares(Array(9).fill(null))
   }
 
+  const renderSquare = (i) => {
+    return <Square value={squares[i]}
+    onClick={() => handleClick(i)} />
+  }
+
 
 
 
