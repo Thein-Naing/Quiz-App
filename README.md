@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+You can check final result here https://game-tictactoe-game.netlify.app/
+# Getting Started with Create React App .
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
